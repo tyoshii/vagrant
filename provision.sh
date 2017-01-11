@@ -1,9 +1,9 @@
 # JST
 cp /usr/share/zoneinfo/Japan /etc/localtime
 
-# yum update
+# yum update and install common package
 yum -y update
-yum -y install vim curl
+yum -y install vim curl bind-utils ansible
 
 
 # httpd
