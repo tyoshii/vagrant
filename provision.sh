@@ -3,7 +3,7 @@ cp /usr/share/zoneinfo/Japan /etc/localtime
 
 # yum update and install common package
 yum -y update
-yum -y install vim curl bind-utils ansible
+yum -y install vim curl bind-utils nkf
 
 
 # httpd
@@ -14,7 +14,7 @@ chkconfig httpd on
 # for php 5.6
 yum -y install epel-release
 rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
-yum -y install --enablerepo=remi,remi-php56 php php-devel php-mbstring php-pdo php-gd php-xml php-mysql
+yum -y install --enablerepo=remi,remi-php56 php php-devel php-mbstring php-pdo php-gd php-xml php-mysql php-process
 
 # php.ini
 cp /etc/php.ini /etc/php.ini.bk
